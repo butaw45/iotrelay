@@ -77,11 +77,25 @@
               <th style="width: 10px;">Aksi</th>
             
             </tr>
-            <tr>
-              <td></td>
-              <td></td>
+
+            <?php
+            //TODO:Baca isi tabel jam
+            $sql = mysqli_query($konek, "SELECT * FROM jam order by id asc");
+
+            while($data = mysqli_fetch_array($sql)){
+
             
+            ?>
+            <tr>
+              <td> <?php echo $data['jam'];?></td>
+              <td> <a href="hapus.php?id=<?php echo $data['id']; ?>">
+                  <i class="fa fa-trash"></i>
+                  </a>
+              </td>
             </tr>
+            <?php
+            }
+            ?>
             </table>
 
         </div>
