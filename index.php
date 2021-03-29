@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>IoT Relay Test</title>
+  <title>IoT Relay</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
