@@ -39,8 +39,15 @@
     align-items: center;
     text-align: center;
   }
-
   </style>
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+      setInterval(function(){
+        $("#datajam").load('cekjam.php');
+      },1000);
+    });
+  </script>
 </head> 
 
 <body>
@@ -58,7 +65,9 @@
 
         <div class="card-body">
             Jam Sekarang:
-            <h2 style="font-weight: bold;">11.11.11</h2>
+            <h2 style="font-weight: bold;">
+              <div id="datajam"></div>
+            </h2>
             <br>
             <div class="form-group">
               <form method="POST">
