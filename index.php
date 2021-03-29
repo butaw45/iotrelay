@@ -1,3 +1,21 @@
+<?php
+    //Koneksi kedatabase
+    $konek = mysqli_connect("localhost","root","","dbiotrelay");
+
+
+    //uji apakah tombol simpan diklik
+    if (isset($_POST['btnSimpan'])) {
+      $jam = $_POST['jam'];
+      $status = 0;
+
+      //simpan kedalam database
+      //supaya id selalu dimulai awal
+      mysqli_query($konek,"ALTER TABLE jam AUTO_INCREMENT=1");
+      mysqli_query($konek,"INSERT INTO jam(jam,status)values('$jam','$status')");
+    }
+    
+?>
+
 <!doctype html>
 <html lang="en">
 
